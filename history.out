@@ -1,0 +1,72 @@
+    1  groupadd students
+    2  useradd -u 1234 -g students -m -s /bin/bash user1
+    3  passwd user1
+    4  chage -M 90 user1
+    5  chage -l user1 | grep "Maximum"
+    6  id user1
+    7  grep user1 /etc/passwd
+    8  chage -l user1
+    9  find / -type f -perm -4000 2>dev/null > suid_files.txt
+   10  find / -type f -perm -4000 2>/dev/null > suid_files.txt
+   11  cat suid_files.txt 
+   12  ps -eo ruid,euid,pid,cmd | awk '$1!=0 && $2==0'
+   13  ps -eo ruid,euid,pid,cmd | awk '$1!=0 && $2==0' > priv_processes.txt
+   14  cat priv_processes.txt 
+   15  cp /usr/bin/cat /home/user1/mycat
+   16  chown root:root /home/user1/mucat
+   17  id user1
+   18  ls -la /home/
+   19  ls /usr/bin/cat
+   20  ls -l /usr/bin/cat
+   21  cp /usr/bin/cat /home/user1/mycat
+   22  ls -l /home/user1
+   23  chown root:root /home/user1/mucat
+   24  chmod u+s /home/user1/mycat
+   25  ls -l /home/user1/mycat
+   26  su - user1
+   27  cp /usr/bin/chown /home/user1/mychown
+   28  ls -l /home/user1
+   29  setcap cap_chown+ep /home/user1/mychown
+   30  getcap /home/user1/mychown
+   31  su - user1
+   32  touch /home/user1/testfile.txt
+   33  ls -l /home/user1
+   34  su - user1
+   35  visudo
+   36  visudo -c
+   37  su - user1
+   38  history > ~/history.out
+   39  stat /home/user1 > ~/stat.out
+   40  stat /home/user1/mycat >> ~/stat.out
+   41  stat /home/user1/mychown >> ~/stat.out
+   42  getcap /home/user1/mychown > ~/getcap.out
+   43  cp /etc/passwd ~/passwd_copy
+   44  cp /etc/shadow ~/shadow_copy
+   45  cp /etc/group ~/group_copy
+   46  cp /etc/sudoers ~/sudoers_copy
+   47  cat ~/stat.out
+   48  cat ~/group_copy 
+   49  yam install git
+   50  dnf install git
+   51  timedate set-ntp true
+   52  timedatectl set-ntp true
+   53  timedatectl
+   54  timedatectl set-ntp true
+   55  timedatectl
+   56  ip a
+   57  ping -c 4 8.8.8.8
+   58  timedatectl set-ntp true
+   59  timedatectl
+   60  system status chronyd
+   61  systemctl status chronyd
+   62  timedatectl set-ntp true
+   63  timedatectl
+   64  timedatectl set-time "2026-10-02 12:00:00"
+   65  timedatectl set-ntp false
+   66  timedatectl set-time "2026-10-02 12:00:00"
+   67  timedatectl
+   68  timedatectl set-ntp true
+   69  timedatectl
+   70  dnf install git
+   71  echo "Студент: Кобецкий А.И., Табельный номер: 359123"
+   72  history > ~/history.out
